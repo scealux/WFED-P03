@@ -6,17 +6,17 @@ var cc = c.getContext('2d');
 setInterval(update, 1000/60); //SET FRAMERATE AT 60 fps
 document.addEventListener('keydown', function(e){
      const keyName = event.key;
-     if ((keyName == 'ArrowUp' || keyName == 'w')&&(boats[0].yv >= -.4)){
-          boats[0].yv -= 0.01;
+     if ((keyName == 'ArrowUp' || keyName == 'w')&&(boats[0].yv >= -3)){
+          boats[0].yv -= 0.1;
      }
-     if ((keyName == 'ArrowDown' || keyName == 's')&&(boats[0].yv <= .4)){
-          boats[0].yv += 0.01;
+     if ((keyName == 'ArrowDown' || keyName == 's')&&(boats[0].yv <= 3)){
+          boats[0].yv += 0.1;
      }
-     if ((keyName == 'ArrowLeft' || keyName == 'a')&&(boats[0].xv >= -.4)){
-          boats[0].xv -= 0.01;
+     if ((keyName == 'ArrowLeft' || keyName == 'a')&&(boats[0].xv >= -3)){
+          boats[0].xv -= 0.1;
      }
-     if ((keyName == 'ArrowRight' || keyName == 'd')&&(boats[0].xv <= .4)){
-          boats[0].xv += 0.01;
+     if ((keyName == 'ArrowRight' || keyName == 'd')&&(boats[0].xv <= 3)){
+          boats[0].xv += 0.1;
      }
 });
 var boatThickness = 20;
@@ -53,7 +53,7 @@ function getBoatAngle(xv,yv) {
 }
 function drawBoat(){
      boats[0].xc+=boats[0].xv;
-     var newX = boats[0].xc -10;
+     var newX = boats[0].xc -5;
      boats[0].yc+=boats[0].yv;
      var newY = boats[0].yc - 20;
      var boatTilt = getBoatAngle(boats[0].xv,boats[0].yv);
@@ -61,7 +61,7 @@ function drawBoat(){
      cc.save();
      cc.translate(newX,newY);
           cc.rotate(boatTilt*Math.PI/180);
-               cc.fillRect(0,0,20,40);
+               cc.fillRect(0,0,10,40);
      //      cc.rotate(-boatTilt*Math.PI/180);
      // cc.translate(-newX, -newY);
      cc.restore();
@@ -70,7 +70,7 @@ function update(){
      //Want to check all boats
      //cc.translate(0,0);
      cc.fillStyle='lightblue';
-     cc.fillRect(0,0,c.width, c.height);
+     //cc.fillRect(0,0,c.width, c.height);
      cc.fillStyle='SaddleBrown';
      //for boats in boats
      drawBoat();
