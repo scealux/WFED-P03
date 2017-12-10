@@ -1,5 +1,179 @@
 /*CSS*/
-canvas{
-  border: 5px dotted black;
-  /*border-radius: 50%;*/
+#vue-app{
+     width: 90%;
+     margin: 0 auto;
+     margin-top: 10vh;
+     font-family: 'Poppins', sans-serif;
+     padding: 30px;
+     text-align: center;
+     color: white;
+     background: #292a6a;
+     justify-content: center;
+     box-sizing: border-box;
+     border-radius: 10px;
+}
+*:focus {
+    outline: 0;
+}
+#redBorder{
+     border: 5px solid #b32942;
+     box-sizing: border-box;
+     border-radius: 10px;
+}
+#sourcePart{
+     color: gray;
+     margin: 0;
+     margin-bottom: 3em;
+     padding: 0;
+}
+.star {
+     width: 25px;
+     margin: 0 10px;
+}
+body {
+     height: 100vh;
+     overflow: hidden;
+     background-image: url(https://www.whitehouse.gov/sites/whitehouse.gov/files/og-image.png);
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+}
+#stripes {
+     border-radius: 10px;
+     height: 100vh;
+     width: 100%;
+     overflow: hidden;
+     background-image: url(../img/stripe.png);
+}
+#stars{
+     position: fixed;
+     margin: 0 auto;
+     width: 240px;
+     left: 50%;
+     margin-top: -10px;
+     margin-left: -170px;
+     height: 50px;
+     border-left: 30px solid #292a6a;
+     border-right: 30px solid #292a6a;
+     background-color: #292a6a;
+}
+#wpmBox {
+     color: #b32942;
+     font-size: 2em;
+     position: fixed;
+     margin: 0 auto;
+     left: 50%;
+     margin-top: -25px;
+     margin-left: -75px;
+     height: 50px;
+     border-left: 30px solid #292a6a;
+     border-right: 30px solid #292a6a;
+     background-color: #292a6a;
+}
+#wpmBox::after {
+     content: "WPM";
+     font-size: .5em;
+}
+h1 {
+     font-size: 8em;
+     margin: 10px 0px;
+}
+h2 {
+     letter-spacing: 5px;
+     font-weight: 500;
+     margin-top: -2em;
+     margin-bottom: 2em;
+}
+h3{
+     background: #292a6a;
+     width: 100%;
+     position: fixed;
+     padding: 5px 0;
+     bottom: 0px;
+     left: 0px;
+     font-weight: 500;
+     font-size: 1em;
+}
+span{
+     margin: 0;
+     padding: 0;
+}
+#typed{
+     color: green;
+     font-weight: 500;
+     margin-right: 0px;
+     padding-right: 0px;
+}
+#prompt{
+     width: 70%;
+     font-size: 2em;
+     margin: 0px auto;
+}
+#prompt::before{
+     content: '"';
+     color: gray;
+}
+#prompt::after{
+     content: '"';
+     color: gray;
+}
+#toType {
+     margin-left: 0px;
+     padding-left: 0px;
+     color: white;
+     font-weight: 500;
+
+}
+#textField{
+     margin: 0 auto;
+     left: 0;
+     width: 70%;
+     border: none;
+     border-radius: 10px;
+     text-align: center;
+     background: #292a6a;
+     font-family: 'Poppins', sans-serif;
+     color: white;
+     font-size: 2em;
+     font-weight: 900;
+
+}
+#interactiveArea {
+     margin: 0 auto;
+     left: 0;
+     width: 70%;
+     border: 5px solid #b32942;
+     border-radius: 10px;
+     text-align: center;
+     background: #292a6a;
+     margin-bottom: 2em;
+}
+#restartButton {
+     float: right;
+     height: 50px;
+     font-size: 1.5em;
+     font-family: 'Poppins', sans-serif;
+     border-radius 5px;
+     background: #292a6a;
+     border: none;
+     border-left: 5px solid #b32942;
+     color: white;
+     transition: background-color .5s;
+}
+#restartButton:hover {
+     background: #b32942;
+}
+#restartButton:active {
+     background: #8d172f;
+     border-radius: 5px;
+}
+@media only screen and (min-width: 780px) and (max-width: 990px)  {
+     h1{
+          font-size: 6em;
+    }
+}
+@media only screen and (min-width: 100px) and (max-width: 780px)  {
+     h1{
+          font-size: 4em;
+    }
 }

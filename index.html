@@ -1,25 +1,53 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="css/p03styles.css" rel="stylesheet"/>
-    <!--ADDING FREDOKA-->
-    <link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
-    <!-- ADDING FONT AWESOME -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- ADDING JQUERY -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <meta charset="utf-8">
-    <title>Broadside!</title>
-  </head>
-  <body>
-    <h1>Broadside!</h1>
-    <canvas id="gc" width="800" height="800">
-      Your browser does not support canvas!
-    </canvas>
-    <p id="velocityDebug">
+<head>
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link href="css/p03styles.css" rel="stylesheet"/>
+     <!--ADDING FREDOKA-->
+     <link href="https://fonts.googleapis.com/css?family=Poppins:500,900" rel="stylesheet">
+     <!-- ADDING FONT AWESOME -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <!-- ADDING JQUERY -->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+     <link rel="icon"
+      type="image/ico"
+      href="favicon.ico">
+     <title>Trump Typer</title>
+</head>
+<body>
+     <div id="stripes">
+          <div id="vue-app">
+               <div id="stars">
+                    <img src="img/star.png" class="star" />
+                    <img src="img/star.png" class="star" />
+                    <img src="img/star.png" class="star" />
+                    <img src="img/star.png" class="star" />
+                    <img src="img/star.png" class="star" />
+               </div>
+               <div id="redBorder">
+                    <h1>TRUMP TYPER</h1>
+                    <h2>WANT TO BE PRESIDENT? PRACTICE SPEAKING LIKE ONE!</h2>
+                    <h3>Fun, no matter how big your hands are!™</h3>
 
-    </p>
-    <script src="js/p03scripts.js"></script>
-  </body>
+                    <p id="prompt">
+                         <span id="typed"> {{ theInput }}</span>
+                         <span id="toType"> {{ remainingString }}</span>
+                    </p>
+                    <p id="sourcePart">
+                         <i> {{ currentSource }} </i>
+                    </p>
+                    <div id="interactiveArea">
+                         <input id="textField" type="text" v-model="theInput" @keydown="figureKey" autofocus/>
+                         <button @click="nextQuote" v-show="isRoundOver" id="restartButton">Next Quote?</button>
+                    </div>
+               </div>
+               <div id="wpmBox" v-model="WPM">
+                    {{ WPM }}
+               </div>
+               <script src="js/p03scripts.js"></script>
+          </div>
+     </div>
+</body>
 </html>
