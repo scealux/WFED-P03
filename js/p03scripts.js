@@ -97,7 +97,6 @@ var vm = new Vue ({
                this.timePassedAtLastPress = 0;
                this.tracking = false;
                this.theInput = '';
-
           }
      },
      computed: {
